@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { ThemeProvider } from "react-jss";
 import Navbar from "./components/Navbar";
-import { useStyles } from "./style/style";
 import Container from "./components/Container";
 
 const themeDefault = {

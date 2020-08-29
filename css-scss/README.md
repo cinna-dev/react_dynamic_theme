@@ -1,6 +1,6 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-# Dynamic Theme mit css / scss
+# Dynamic Theme mit css / scss in React
 
 ## spezielle css classes für die themes
 
@@ -40,13 +40,13 @@ const App = () => {
 
 ```javaScript
 const Navbar = props => {
-  console.log();
   const theme = useContext(ThemeContext);
   return (
     <nav className={`navbar ${theme}`}>
+    ...
 ```
 
-## proplematisch sind jedoch die DOM Elemente die nicht als Componenten vertreten sind wie z.B Body , html etc...
+## Proplematisch sind jedoch die DOM Elemente die nicht als Componenten vertreten sind wie z.B body , html etc...
 
 ## Diese müssen außerhalb des virtuellen DOMs manipuliert werden
 
@@ -54,7 +54,6 @@ zum Beispeiel:
 
 ```javaScript
  const themeHandler = theme => {
-    setTheme(theme);
     const body = (document.getElementsByTagName("body")[0].className = theme);
   };
 ```
