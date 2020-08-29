@@ -1,0 +1,113 @@
+$theme: ("default": ("primary": rgb(56, 56, 56),
+    "secondary": rgb(104, 104, 104),
+  ),
+  "theme1": ("primary": rgb(60, 71, 104),
+    "secondary": rgb(84, 135, 218),
+  ),
+  "theme2": ("primary": rgb(95, 49, 35),
+    "secondary": rgb(212, 112, 82),
+  ),
+);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: map-get(map-get($theme, "default"), "primary");
+  transition: all 0.5s linear;
+}
+
+.navbar {
+  background-color: map-get(map-get($theme, "default"), "secondary");
+  color: map-get(map-get($theme, "default"), "primary");
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
+  flex-basis: auto;
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  transition: all 0.5s linear;
+}
+
+.navbar.theme1 {
+  background-color: map-get(map-get($theme, "theme1"), "primary");
+  color: map-get(map-get($theme, "theme1"), "secondary");
+}
+
+.navbar.theme2 {
+  background-color: map-get(map-get($theme, "theme2"), "primary");
+  color: map-get(map-get($theme, "theme2"), "secondary");
+}
+
+.nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 40px;
+
+  li {
+    a {
+      padding: 2rem;
+    }
+  }
+}
+
+.container {
+  width: 100%;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.theme-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+     color: map-get(map-get($theme, "default"), "primary");
+     border-right: 2px solid map-get(map-get($theme, "default"), "primary");
+  width: 300px;
+  height: 400px;
+   background-color: map-get(map-get($theme, "default"), "secondary");
+  transition: all 0.5s linear;
+}
+
+.theme-button1.theme1 {
+  color: map-get(map-get($theme, "theme1"), "primary");
+  border-right: 2px solid map-get(map-get($theme, "theme1"), "primary");
+  background-color: map-get(map-get($theme, "theme1"), "secondary");
+}
+
+.theme-button2.theme2 {
+  color: map-get(map-get($theme, "theme2"), "primary");
+  border-right: 2px solid map-get(map-get($theme, "theme2"), "primary");
+  background-color: map-get(map-get($theme, "theme2"), "secondary");
+}
