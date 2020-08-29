@@ -8,6 +8,7 @@ const App = () => {
 
   const themeHandler = theme => {
     setTheme(theme);
+    const body = (document.getElementsByTagName("body")[0].className = theme);
   };
 
   return (

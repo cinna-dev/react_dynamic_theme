@@ -20,6 +20,15 @@ body {
   transition: all 0.5s linear;
 }
 
+body.theme1 {
+  background-color: map-get(map-get($theme, "theme1"), "primary");
+}
+
+body.theme2 {
+  background-color: map-get(map-get($theme, "theme2"), "primary");
+}
+
+
 .navbar {
   background-color: map-get(map-get($theme, "default"), "secondary");
   color: map-get(map-get($theme, "default"), "primary");
@@ -47,13 +56,13 @@ body {
 }
 
 .navbar.theme1 {
-  background-color: map-get(map-get($theme, "theme1"), "primary");
-  color: map-get(map-get($theme, "theme1"), "secondary");
+  background-color: map-get(map-get($theme, "theme1"), "secondary");
+  color: map-get(map-get($theme, "theme1"), "primary");
 }
 
 .navbar.theme2 {
-  background-color: map-get(map-get($theme, "theme2"), "primary");
-  color: map-get(map-get($theme, "theme2"), "secondary");
+  background-color: map-get(map-get($theme, "theme2"), "secondary");
+  color: map-get(map-get($theme, "theme2"), "primary");
 }
 
 .nav {
@@ -92,11 +101,11 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-     color: map-get(map-get($theme, "default"), "primary");
-     border-right: 2px solid map-get(map-get($theme, "default"), "primary");
+  color: map-get(map-get($theme, "default"), "primary");
+  border-right: 2px solid map-get(map-get($theme, "default"), "primary");
   width: 300px;
   height: 400px;
-   background-color: map-get(map-get($theme, "default"), "secondary");
+  background-color: map-get(map-get($theme, "default"), "secondary");
   transition: all 0.5s linear;
 }
 
